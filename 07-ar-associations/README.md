@@ -16,3 +16,6 @@
 1. Mapping out my domain 
 2. Create Animals table
 3. Test relationships
+  - create the relationships in db
+  - create the relationships in our models
+
