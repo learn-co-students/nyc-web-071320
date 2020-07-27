@@ -1,0 +1,47 @@
+{
+    "users": [
+        {
+            "name": "Vlad",
+            "password": "1234",
+            "age": 21,
+            "ssn": 1234,
+            "nickname": null
+        },
+        {
+            "name": "Jeff",
+            "password": "1234",
+            "age": 21,
+            "ssn": 1234,
+            "nickname": "jeff"
+        },
+        {
+            "name": "Jennifer",
+            "password": "1234",
+            "age": 21,
+            "ssn": 1234,
+            "nickname": "Jenn"
+        }
+    ],
+    "animals": [
+        {
+            "species": "snake",
+            "name": "Bob",
+            "speak": "hiss"
+        },
+        {
+            "species": "dog",
+            "name": "Coco",
+            "speak": "bark bark"
+        },
+        {
+            "species": "flying lemur",
+            "name": "momo",
+            "speak": "slkdfjlsk"
+        },
+        {
+            "species": "husky",
+            "name": "sophie",
+            "speak": "woof woof"
+        }
+    ]
+}
