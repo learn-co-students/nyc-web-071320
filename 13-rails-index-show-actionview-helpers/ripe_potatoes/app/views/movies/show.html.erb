@@ -1,0 +1,10 @@
+<h1>Movie Show Page</h1>
+
+<h4><%= @movie.title %></h4>
+<p><%= @movie.genre %></p>
+<p><%= @movie.year %></p>
+<img src="<%= @movie.img_url %>" alt="<%= @movie.title %>">
+
+<br>
+<%= link_to "Index Page", movies_path %> 
+                          

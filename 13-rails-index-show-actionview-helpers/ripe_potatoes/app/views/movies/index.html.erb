@@ -1,0 +1,15 @@
+<h1>Movie Index Page</h1>
+
+
+<a href="https://codepen.io/"> CODE PEN </a>
+<br>
+<a href="/movies/5"> movie 5 </a>
+
+
+
+<% @movies.each do |movie| %>
+  <p><%# link_to movie.title, "/movies/#{movie.id}" %></p>
+  <p><%= link_to movie.title, movie_path(movie.id) %></p>
+  <p><%= link_to movie.title, movie_path(movie) %></p>
+  <p><%= link_to movie.title, movie %></p>
+<% end %>
