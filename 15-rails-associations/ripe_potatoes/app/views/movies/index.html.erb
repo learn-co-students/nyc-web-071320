@@ -1,0 +1,7 @@
+<h1>Movie Index Page</h1>
+
+<% @movies.each do |movie| %>
+  <p><%# link_to movie.title, movie_path(movie.id) %></p>
+  <p><%= link_to movie.title, movie_path(movie) %></p>
+  <p><%# link_to movie.title, movie %></p>
+<% end %>
