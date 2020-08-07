@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RipePotatoes</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <div class='nav'>
+        <%# <span><h1>Movie Magic</h1></span> %>
+        <img class='logo' src="https://secureimg.stitcher.com/feedimagesplain328/168515.jpg" alt="mm">
+      </div>
+
+      <ul>
+        <li><%= link_to 'Movie Home', movies_path %></li>
+        <li><%= link_to 'New Movie', new_movie_path %></li>
+      </ul>
+
+    <%= yield %>
+  </body>
+</html>
