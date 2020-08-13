@@ -1,0 +1,24 @@
+<h1>Create Review</h1>
+
+<% if flash[:my_errors] %>
+  <% flash[:my_errors].each do |error| %>
+    <p style="color: yellow;"><%= error %></p>
+  <% end %>
+<% end %>
+
+<%= form_for @review do |f| %>
+  <%= f.label :user_id %>
+  <%= f.collection_select :user_id, @users, :id, :name %>
+
+  <%= f.label :movie_id %>
+  <%= f.collection_select :movie_id, @movies, :id, :title %>
+
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+
+  <%= f.submit %>
+<% end %>
+

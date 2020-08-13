@@ -1,0 +1,12 @@
+<h1>User Show</h1>
+
+<h4><%= @user.name %></h4>
+<p><%= @user.age %></p>
+<p><%= @user.slogan %></p>
+<img src="<%= @user.img_url %>" alt="<%= @user.name%>">
+
+<h1>My Favorites</h1>
+
+<% @user.movies.each do |movie| %>
+  <p><%= link_to movie.title, movie_path(movie) %></p>
+<% end  %>
