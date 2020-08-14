@@ -1,0 +1,20 @@
+<div class="show-body">
+    <% if  session[:view_count] <= 3 %>
+        <h1 style="color: green;">You have <%= 3 - session[:view_count].to_i %> view left</h1>
+        <h2><%= @movie.title %></h2>
+        <p><%= @movie.overview %></p>
+
+
+        <marquee scrolldelay='60'><img class="show-img" src="<%= @movie.img_url %>" alt="<%= @movie.title%>"></marquee> 
+
+        <h6>Vote Count: <%= @movie.vote_count %></h6>
+        <h6>Vote Average: <%= @movie.vote_average %></h6>
+
+        <span><%= link_to "MOViES HOME", movies_path %></span>
+    <% else %>
+        <h1>Show Some Ad</h1>
+        <iframe width="966" height="543" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <%= button_to "I Prmise I got Rolled", page_reset_path, method: :delete %>
+    <% end %>
+</div>

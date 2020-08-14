@@ -1,0 +1,12 @@
+<%= form_for @movie do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :overview %>
+  <%= f.text_field :overview %>
+
+  <%= f.label :year %>
+  <%= f.number_field :year %>
+  
+  <%= f.submit %>
+<% end %>

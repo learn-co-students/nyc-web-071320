@@ -1,0 +1,13 @@
+<h1>Movie Index Page</h1>
+
+<div class="index-container">
+  <% @users.each do |user| %>
+    <div class="index-tile">
+      <h3><%= link_to user.name, user_path(user.id)  %></h3>
+      
+      <img class="index-img" src="<%= user.img_url %>" alt="<%= user.name%>">
+      
+      <%= button_to "X", user_path(user), method: :delete %>
+    </div>
+  <% end %>
+</div>

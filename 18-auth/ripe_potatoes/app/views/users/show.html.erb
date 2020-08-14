@@ -1,0 +1,16 @@
+<div class="show-body">
+  <h1>User Show</h1>
+
+  <h4><%= @user.name %></h4>
+  <p><%= @user.age %></p>
+  <p><%= @user.slogan %></p>
+  <img class="show-img" src="<%= @user.img_url %>" alt="<%= @user.name%>">
+
+  <h1>My Reviews</h1>
+
+  <% @user.reviews.each do |review| %>
+    <h3><%= link_to review.movie.title, movie_path(review.movie) %></h3>
+    <p><%= review.content %> || <%= review.rating %></p>
+    <hr>
+  <% end  %>
+</div>
