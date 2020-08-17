@@ -11,8 +11,9 @@
       <hr>
       <h6>API Vote Count: <%= movie.vote_count %></h6>
       <h6>API Average Vote: <%= movie.vote_average %></h6>
-      
-      <%= button_to "X", movie_path(movie), method: :delete %>
+      <% if @current_user %>
+        <%= button_to "X", movie_path(movie), method: :delete %>
+      <% end %>
     </div>
   <% end %>
 </div>

@@ -22,8 +22,10 @@
 
         <% if @current_user %>
           <li class='right'>Welcome <%= @current_user.name %>!</li>
+          <li class='right'><%= link_to "Log-Out", logout_path, method: :delete%></li>
         <% else %>
-          <li class='right'><%= link_to 'Sign-up', new_user_path %></li>
+          <li class='right'><%= link_to 'Sign-Up', new_user_path %></li>
+          <li class='right'><%= link_to 'Sign-In', new_login_path %></li>
         <% end %>
       </ul>
 

@@ -1,5 +1,9 @@
 <h1>Movie Index Page</h1>
 
+<% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+<% end %>
+
 <div class="index-container">
   <% @users.each do |user| %>
     <div class="index-tile">

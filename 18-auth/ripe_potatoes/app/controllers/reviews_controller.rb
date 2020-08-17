@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
   end 
 
   def create 
-    @review = Review.create(review_params)
+    @review = @current_user.reviews.create(review_params)
     # @review = Review.new(review_params)
 
       #  @review.save
@@ -24,7 +24,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:user_id, :movie_id, :rating, :content)
+    params.require(:review).permit(:movie_id, :rating, :content)
   end 
 
 end

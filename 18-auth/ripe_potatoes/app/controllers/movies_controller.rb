@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :find_movie, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorized, only: [:index]
 
   def index 
     # byebug
