@@ -75,6 +75,16 @@ console.log("Welcome to Mod 3")
 
 */
 
+// function declaration
+function sayHi(name) { 
+  console.log(`Hi there ${name}`) 
+}
 
+// function expression
+let sayHello = function(name){
+  console.log(`Hello there ${name}`)
+}
 
+// arrow functions
+let sayHowdy = name => `Howdy ${name}`
 
