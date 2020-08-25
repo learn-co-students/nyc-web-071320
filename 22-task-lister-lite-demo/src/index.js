@@ -20,21 +20,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", function(e){
     e.preventDefault()
+    
+    const form = e.target
 
-    const task = e.target['new-task-description'].value
+    const priority = form.priority.value
+    
+    const task = form['new-task-description'].value
     const taskLi = document.createElement('li')
     taskLi.textContent = task
+    taskLi.style.backgroundColor = priority
 
     const button = document.createElement("button")
     button.textContent = "X"
     taskLi.append(button)
 
+    const edit = document.createElement('button')
+    edit.textContent = "Edit"
+    taskLi.append(edit)
+    
     button.addEventListener("click", function(e){
-      const taskLi = e.target.parentElement
+      const taskLi = form.parentElement
       taskLi.remove()
     })
 
-    const tasks = document.getElementById('tasks')
-    tasks.append(taskLi)
+    // const tasks = document.getElementById('tasks')
+    const div = document.querySelector(`#${priority}`)
+    div.append(taskLi)
   })
 });
