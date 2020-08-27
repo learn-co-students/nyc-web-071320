@@ -40,17 +40,18 @@
       "id": 7,
       "name": "Hamm",
       "image": "https://cdn140.picsart.com/244090226021212.png?r1024x1024",
-      "likes": 0
+      "likes": 11
     },
     {
       "id": 8,
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
-      "likes": -2
+      "likes": 10
     },
     {
-      "name": "Joe",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/71YhmJOAi5L._AC_SX425_.jpg",
+      "name": "Teddy",
+      "image": "https://media4.s-nbcnews.com/j/newscms/2014_13/281626/140326-ruxpin-jms-1530_9f25e56f68cd1875bcb44bf37d78bea1.fit-760w.jpg",
+      "likes": 0,
       "id": 9
     }
   ]
