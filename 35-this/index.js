@@ -55,17 +55,31 @@ const hp1 = {
 // printBookTitle.call(hp1, 99)
 // printBookTitle.apply(hp1, [99, "other", "stuff"])
 
-printBookTitle.bind(hp1, 99) // useful for callbacks
+// printBookTitle.bind(hp1, 99) // useful for callbacks
 
-// header.addEventListener("click", brave.printAuthor.bind(hp1, 99)) 
+header.addEventListener("click", printBookTitle.bind(hp1, 99)) 
 
 
-/************ Function Called with New Keyword ***********/
+/************ Constructor Function Called with New Keyword ***********/
+
+// one of the things the `new` keyword does is that it creates an empty POJO and binds it as the `thisArg` of the constructor function
 
 function Book(title, author){
   this.title = title,
   this.author = author
 }
+
+/*
+The above constructor function would look like this using class syntax
+
+class Book{
+  constructor(title, author){
+    this.title = title,
+    this.author = author
+  }
+}
+
+*/
 
 let dune = new Book("Dune", "Frank Herbert")
 
