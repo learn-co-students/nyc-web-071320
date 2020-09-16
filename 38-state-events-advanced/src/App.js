@@ -2,16 +2,23 @@ import React from "react";
 import "./App.css";
 import BeyContainer from './BeyContainer'
 import Favorites from './Favorites'
+import api from './api.js'
 
 class App extends React.Component {
 
   state = {
-    favoritesArray: []
+    beyArray: api
   }
 
-  addToFavHandler = (beyObj) => {
+  addToFavHandler = (id) => {
+    // iterate through state and find the object with this id 
+    let newArray = [...this.state.beyArray]
+    let foundObj = newArray.find(el => el.id === id)
+    // change the favorites key of that object to true
+    foundObj.favorite = true
+    // trigger a re-render 
     this.setState(() => ({
-      favoritesArray: [beyObj, ...this.state.favoritesArray]
+      beyArray: newArray
     }))
   }
   removeFavHandler = (id) => {
@@ -27,7 +34,6 @@ class App extends React.Component {
     window.alert("Hot Sauce...swag")
   }
 
-
   allFavorites = () => {
     return this.state.beyArray.filter(el => el.favorite)
   }
@@ -37,7 +43,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <BeyContainer beyArray={this.state.beyArray} clickHandler={this.addToFavHandler} />
-        {/* <Favorites beyArray={this.allFavorites()} clickHandler={this.removeFavHandler} /> */}
+        <Favorites beyArray={this.allFavorites()} clickHandler={this.removeFavHandler} />
       </div>
     );
   }
