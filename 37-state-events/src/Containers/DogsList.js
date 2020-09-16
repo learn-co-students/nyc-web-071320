@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { apiResponse } from '../api.js'
 import DogCard from "../Components/DogCard.js";
+
+
 class DogList extends Component {
 
   dogs = () => {
