@@ -5,7 +5,7 @@ const BeyCard = (props) => {
   return (
     <div>
       <h3>{props.bey.name}</h3>
-      <img alt="" src={props.bey.img} onClick={function () { props.clickHandler(props.bey.id) }} />
+      <img alt="" src={props.bey.img} onClick={function () { props.clickHandler(props.bey) }} />
     </div>
   );
 };
